@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>轮播图小插件</title>
+		<script src="js/taketurn.js"></script>
+	</head>
+	<style type="text/css">
+		/*上图图片轮番*/
+		.image-content {
+			height: 420px;
+			width: 666px;
+			margin-right: 24px;
+		}
+
+		#content {
+			position: relative;
+			height: 95%;
+			width: 100%;
+		}
+
+		#content ul {
+			list-style-type: none;
+		}
+
+		#content .picture {
+			position: relative;
+		}
+
+		#content .picture li {
+			position: absolute;
+		}
+
+		#content .picture li img {
+			height: 420px;
+			width: 666px;
+		}
+
+		#content .list li.current {
+			opacity: 1;
+			filter: alpha(opacity=100);
+		}
+		/*小点样式*/
+		#content .minPoint {
+			z-index: 8;
+			position: absolute;
+			right: 38%;
+			bottom: 10px;
+		}
+
+		#content .minPoint li {
+			z-index: 999;
+			float: left;
+			width: 12px;
+			height: 12px;
+			border-radius: 12px;
+			cursor: pointer;
+			margin-right: 12px;
+			background: #E5E4E4;
+			opacity: 0.7;
+		}
+
+		#content .minPoint li.current {
+			background: #5199fd;
+		}
+	</style>
+
+	<body>
+		<div class="image-content">
+			<div id="content">
+				<ul class="picture">
+					<li class="current">
+						<img src="img/1.jpg" />
+					</li>
+					<li>
+						<img src="img/2.jpg" />
+					</li>
+					<li>
+						<img src="img/3.jpg" />
+					</li>
+					<li>
+						<img src="img/4.jpg" />
+					</li>
+				</ul>
+
+				<ul class="minPoint">
+					<li class="current">&nbsp;</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+			</div>
+
+		</div>
+		<div>
+			<h3>这是一个轮播图的 demo,只需要把 taketurn.js 导入文件,在js代码块可以看到</h3>
+			<h2><pre>	var Content = document.getElementById("content");
+	var ContentUl = Content.getElementsByTagName("ul");
+	var AnPicture = ContentUl[0].getElementsByTagName("li");
+	var Num = ContentUl[1].getElementsByTagName("li");</pre></h2>
+			<h3>所以设置项一致，样式根据个人的项目去修改就可以了</h3>
+			<h3><a href="https://htmlpreview.github.io/?https://github.com/Crystal-LDJ/Simulate-Baidu-cloud-login-page/blob/master/Simulate-Baidu-cloud-login-page/index.html">在校练手模拟百度云登录页面写的轮播图脚本</a></h3>
+		</div>
+	</body>
+
+</html>
