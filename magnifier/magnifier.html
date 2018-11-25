@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="js/magnifier.js"></script>
+		<title></title>
+	</head>
+	<style type="text/css">
+		body {
+			margin: 0;
+		}
+		.main_pict {
+			width: 352px;
+			height: 451px;
+			border: 1px solid #eee;
+		}
+
+		.main_pict img {
+			width: 352px;
+			height: 451px;
+		}
+
+		.main_pict .tobig {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 200px;
+			height: 250px;
+			background-color: #C0C0C0;
+			opacity: 0.5;
+		}
+
+		.To_big {
+			position: absolute;
+			left: 380px;
+			top: 0;
+			width: 500px;
+			height: 550px;
+			overflow: hidden;
+			/*	z-index: 8;*/
+		}
+
+		.To_big .image_div {
+			position: absolute;
+			z-index: 8;
+			display: none;
+		}
+
+		.To_big .image_div img {
+			position: absolute;
+			z-index: 8;
+			/*transform: scale(1.2)*/
+		}
+
+		.spct_list {
+			width: 360px;
+			position: relative;
+			height: 68px;
+			/*border:1px solid #eee;*/
+			display: table;
+
+		}
+	</style>
+	<body>
+		<!--主要图片-->
+		<div class="main_pict " id="main_pict">
+			<img src="img/1.jpg" />
+			<div class="tobig" id="tobig"></div>
+		</div>
+
+		<!--放大镜显示主要图片-->
+		<div class="To_big" id="To_big">
+			<div class="image_div" id="image_div">
+				<img src="img/1.jpg" />
+			</div>
+		</div>
+
+		<h3>这是一个简单的放大镜 demo,只需要把 magnifier.js 导入文件,在js代码块可以看到</h3>
+		<h2>
+			<pre>	var main_pict = document.getElementById("main_pict");
+	var tobig = document.getElementById("tobig");
+	var To_big = document.getElementById("To_big");
+	var image_div = document.getElementById("image_div");</pre>
+		</h2>
+		<h3>根据设置的ID一致，样式图片根据需要进行修改就可以了</h3>
+		</div>
+		<script type="text/javascript">
+			window.onload = function() {
+				magnifier();
+			};
+		</script>
+	</body>
+</html>
