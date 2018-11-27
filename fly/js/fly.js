@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
 	$(".append_cloth").click(function() {
-        console.log(123)
+        console.log("import")
 					// --------------------------------------------------------
 					var smallTu = $(".main_pict");
 					var addone = $(".addone");
@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 					// --------------克隆块------------------
 					smallTu.clone().appendTo(xiaogezi);
-          alert(smallTu)
+
 					// --------------位置的获取----------------
 					$(xiaogezi).css({
 						"top" : position.top + "px",

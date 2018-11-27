@@ -1,118 +1,99 @@
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/fly.js " type="text/jscript "></script>
+	<title>克隆并移动图片随后消失</title>
+</head>
+<style type="text/css">
+	.main_pict img {
+		width: 352px;
+		height: 451px;
+	}
 
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	a.append_cloth {
+		border: solid 1px #E61E58;
+		background: #E61E58;
+		position: absolute;
+		text-align: center;
+		width: 188px;
+		height: 45px;
+		line-height: 45px;
+		margin: 10px 20px 10px 0;
+		font-size: 16px;
+		color: white;
+	}
 
-		<script src="js/jquery.js" type="text/javascript"></script>
-		<script src="js/fly.js " type="text/jscript "></script>
+	.addone {
+		position: absolute;
+		color: #CD426C;
+		font-weight: bolder;
+		font-size: 16px;
+		top: 13px;
+		right: 170px;
+		display: none;
+	}
 
-		<title>详情页面</title>
+	.shoppingCar {
+		position: absolute;
+		top: 20px;
+		right: 170px;
+	}
+	/*加入购物车的特效的css样式-*/
 
-	</head>
-  <style type="text/css">
-    /*----------------加入购物车的特效的css样式-*/
-    div.floating-cart{
-    	position:absolute;
-    	top:0;
-    	left:0;
-    	width: 352px;
-    	height: 451px;
-    	background:#fff;
-    	z-index:200;
-    	overflow:hidden;
-    	box-shadow:0px 5px 31px -1px rgba(0, 0, 0, 0.15);
-    	display:none;
-      border:1px solid red;
-    }
-    div.floating-cart.moveToCart{
-    	/*css !important作用是提高指定CSS样式规则的应用优先权。
-    	 在CSS中，通过对某一样式声明! important ，可以更改默认的CSS样式优先级规则，使该条样式属性声明具有最高优先级
-    	 css有继承的样式，加上!importanrt可以覆盖父级的样式。*/
+	div.floating-cart {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 352px;
+		height: 451px;
+		background: #fff;
+		z-index: 200;
+		overflow: hidden;
+		box-shadow: 0px 5px 31px -1px rgba(0, 0, 0, 0.15);
+		display: block;
+	}
 
-    	left: 85% !important;
-    	top: 3% !important;
-    	width:10px;
-    	height: 10px;
-    	-webkit-transition: all 800ms ease-in-out;/*Safari、Chrome。*/
-    	   -moz-transition: all 800ms ease-in-out;/*Firefox*/
-    		-ms-transition: all 800ms ease-in-out;/* Internet Explorer */
-    		 -o-transition: all 800ms ease-in-out;/*Opera浏览器*/
-     		    transition: all 800ms ease-in-out;
-    }
-    .main_pict img{
-    	width: 100%;
-    	height: 100%;
-    }
-    .detail_pic{
-    	float: left;
-    	width: 352px;
-    	height: 600px;
-    }
+	div.floating-cart.moveToCart {
+		/*css !important作用是提高指定CSS样式规则的应用优先权。
+			 在CSS中，通过对某一样式声明! important ，可以更改默认的CSS样式优先级规则，使该条样式属性声明具有最高优先级
+			 css有继承的样式，加上!importanrt可以覆盖父级的样式。*/
+		left: 85% !important;
+		top: 3% !important;
+		width: 10px;
+		height: 10px;
+		transition: all 800ms ease-in-out !important;
+	}
+	.comment{
+		position: absolute;
+		top: 60px;
+		right: 170px;
+	}
+</style>
 
-    .detail_pic .main_pict{
-    	width: 352px;
-    	height: 451px;
-    	border:1px solid #eee;
-    	margin-bottom: 20px;
-    }
-    .detail_pic .main_pict img{
-    	width: 352px;
-    	height: 451px;
-    }
-    .detail_pic .main_pict .tobig{
-    	display: none;
-    	position: absolute;
-    	top: 0;
-    	left: 0;
-    	width: 200px;
-    	height: 250px;
-    	background-color: #C0C0C0;
-    	opacity: 0.5;
-    }
+<body>
 
+	<!--图片展示-->
+	<div class="main_pict " id="main_pict">
+		<img src="img/1.jpg " />
+		<div class="tobig" id="tobig"></div>
+	</div>
 
-  </style>
-	<body>
-		<div class="container">
-				<!--详细上方包裹-->
-				<div class="detail_top ">
-					<!--详细页面中的图片展示-->
-					<div class="detail_pic ">
-						<!--主要图片-->
-						<div class="main_pict " id="main_pict">
-							<img src="img/1.jpg " />
-							<div class="tobig" id="tobig"></div>
-						</div>
+	<a class="append_cloth " title="加入购物车 ">加入购物车</a>
 
+	<div class="addone">+1</div>
 
-
-					</div>
-					<!--详细页面中的介绍 中间-->
-					<div class="detail_tet ">
-
-						<form name="detail_text " action="detail_text " method="post ">
+	<div class="shoppingCar">
+		<a href="">我的购物车</a>
 
 
-							<div class="detail_button ">
-								<a class="append_cloth " title="加入购物车 " >加入购物车</a>
-							</div>
-						</form>
-
-					</div>
-
-
-		</div>
-    <div class="addone">+1</div>
-    <div class="rightArea">
-      <div class="login_Register">    
-        <a href="mybuycar.jsp">我的购物车</a>
-      </div>
-
-    </div>
-
-
-
-	</body>
+	</div>
+	<div class="comment">
+		<h2>这是一个demo 点击加入购物车试试</h2>
+		<h2>只需要把 fly.js 导入文件，可以根据自己实际需求修改js代码（注释）</h2>
+		<h2>注意： CSS transform 属性 , 只对 block 级元素生效！</h2>
+	</div>
+</body>
 
 </html>
