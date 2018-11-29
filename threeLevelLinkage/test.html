@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <select id="d1" onchange="f_d1(this.value)">
+        <option value="">-请选择省-</option>
+        <option value="0">湖南省</option>
+        <option value="1">广东省</option>
+        <option value="2">福建省</option>
+    </select>
+    <select id="d2" onchange="f_d2()">
+        <option value="">-请选择市-</option>
+    </select>
+
+        <select id="d3" >
+        <option value="">-请选择区-</option>
+    </select>
+</body>
+
+<script>
+	//初始化 --------------------start----------------------------
+    city = [];
+    dist=[[]];
+    dist[0]=[[]];
+    dist[1]=[[]];
+    dist[2]=[[]];
+    var d1 = document.getElementById('d1');
+    var d2 = document.getElementById('d2');
+    var d3 = document.getElementById('d3');
+    
+　　    //二级数据
+    city[0] = ['长沙市','衡阳市'];
+    city[1] = ['广州市','深圳市','肇庆市'];
+    city[2] = ['福州市','厦门市'];
+    
+    //三级数据
+    dist[0][0]=['岳麓区','开福区'];
+    dist[0][1]=['南岳区'];
+    dist[1][0]=['天河区','番禺区','越秀区'];
+    dist[1][1]=['南山区','宝安区','福田区','罗湖区']; 
+    dist[1][2]=['鼎湖区','端州区'];
+    dist[2][0]=['鼓楼区','仓山区'];
+    dist[2][0]=['集美区','同安区','思明区'];
+    //初始化 --------------------end--------------------------------
+    
+    //一级更改二级方法
+    function f_d1(m){
+    	//相当于清空二级、三级
+    	d2.length = 1;
+    	d3.length = 1;
+    	
+    	//生成二级option
+        for (var i = 0; i < city[m].length; i++) {
+            d2.add(new Option(city[m][i],i));
+        };
+    }
+    
+    //二级更改三级方法
+    function f_d2(){
+    	//相当于清空三级
+    	d3.length = 1
+    	
+    	//获取下标
+    	m=d1.selectedIndex;
+      	n=d2.selectedIndex;
+     	if(m>0) m-=1;
+      	if(n>0)n-=1;
+      	
+      	//生成三级option
+        for (var j = 0; j< dist[m][n].length; j++) {
+        	d3.add(new Option(dist[m][n][j],j));
+        };
+    }
+</script>
+</html>
