@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>地址三级联动</title>
+	</head>
+
+	<body>
+		<h2>
+			简单的三级联动 Demo, 项目中使用 需要理解逻辑。
+			把省市区 的数据存到数据库，在 js中 ajax 请求数据。
+		</h2>
+		<select id="Province" onchange="selectProvince(this.value)">
+			<option value="">-请选择省-</option>
+			<option value="0">湖南省</option>
+			<option value="1">广东省</option>
+			<option value="2">福建省</option>
+		</select>
+		<select id="City" onchange="selectCity()">
+			<option value="">-请选择市-</option>
+		</select>
+		<select id="Area">
+			<option value="">-请选择区-</option>
+		</select>
+	</body>
+
+	<script src="js/threelevellinkage.js"></script>
+
+</html>
