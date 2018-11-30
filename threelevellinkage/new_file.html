@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="js/threelevellinkage.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div class="form_group">
+
+			<label><strong>*</strong>地址:</label>
+
+			<p class="hr5"></p>
+
+			<select class="select _provice" name="province">
+
+
+
+				<s:iterator value="provinceList">
+
+					<option value="<s:property value='id'/>">
+
+						<s:property value='name' />
+
+					</option>
+
+				</s:iterator>
+
+
+
+			</select>
+
+			<select class="select _city" name="city">
+
+				<c:if test="${address.city==null}">
+
+					<option>选择市</option>
+
+				</c:if>
+
+				<c:if test="${address.city!=null}">
+
+					<option value="<s:property value=" address.city.id" />">
+					<s:property value="address.city.name" />
+					</option>
+
+				</c:if>
+
+			</select>
+
+			<select class="select _contry" name="country">
+
+				<c:if test="${address.country==null}">
+
+					<option>选择区/县</option>
+
+				</c:if>
+
+				<c:if test="${address.country!=null}">
+
+					<option value="<s:property value=" address.country.id" />">
+					<s:property value="address.country.name" />
+					</option>
+
+				</c:if>
+
+			</select>
+
+			<p class="hr10"></p>
+
+			<input type="text" name="detail_address" class="form_control" placeholder="请输入收货地址" value="<s:property value='address.detailaddress' />">
+
+		</div>
+
+	</body>
+</html>
