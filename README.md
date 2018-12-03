@@ -6,3 +6,4 @@
 - [放大镜](https://htmlpreview.github.io/?https://github.com/Crystal-LDJ/Script/blob/master/magnifier/magnifier.html)
 - [克隆并移动图片随后消失](https://htmlpreview.github.io/?https://github.com/Crystal-LDJ/Script/blob/master/fly/fly.html)
 - [三级联动](https://htmlpreview.github.io/?https://github.com/Crystal-LDJ/Script/blob/master/threelevellinkage/threelevellinkage.html)
+- [二级菜单](https://htmlpreview.github.io/?https://github.com/Crystal-LDJ/Script/blob/master/menu/menu.html)

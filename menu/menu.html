@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="js/jquery-3.1.0.min.js"></script>
+		<script src="js/menu.js"></script>
+		<title>二级菜单</title>
+	</head>
+	<style>
+		.my-menu,
+		.my-menu ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			width: 200px;
+		}
+
+		.my-menu li>div {
+			background-color: #f6f6f6;
+			border: 1px solid #d5d5d5;
+			border-radius: 4px;
+			box-shadow: 0 1px 0 0 #333  inset;
+			box-sizing: border-box;
+			margin: 2px;
+			height: 32px;
+			text-align: center;
+			font-size: 14px;
+			line-height: 30px;
+			font-weight: bold;
+			letter-spacing: 5px;
+			cursor: pointer;
+		}
+
+		.my-menu li>div:hover {
+			color: #000;
+		}
+
+		.my-menu li li {
+			padding: 0 10px;
+		}
+
+		.my-menu li li a {
+			display: block;
+			text-align: center;
+			font-size: 13px;
+			color: #666;
+			text-decoration: none;
+			line-height: 24px;
+			border-bottom: dotted 1px #ccc;
+		}
+
+		.my-menu li li:last-child a {
+			border-bottom: none;
+		}
+
+		.my-menu li li a:hover {
+			color: #FF0000;
+		}
+	</style>
+	<body>
+		<div style="float: left; width: 33.33%;">
+		<ul class="my-menu">
+			<li>
+				<div>One</div>
+				<ul>
+					<li><a href="#">Second</a></li>
+					<li><a href="#">Second</a></li>
+					<li><a href="#">Second</a></li>
+				</ul>
+			</li>
+			<li>
+				<div>One</div>
+				<ul>
+					<li><a href="#">Second</a></li>
+					<li><a href="#">Second</a></li>
+					<li><a href="#">Second</a></li>
+					<li><a href="#">Second</a></li>
+				</ul>
+			</li>
+			<li>
+				<div>One</div>
+				<ul>
+					<li><a href="#">Second</a></li>
+					<li><a href="#">Second</a></li>
+					<li><a href="#">Second</a></li>
+					<li><a href="#">Second</a></li>
+				</ul>
+			</li>
+			<li>
+				<div>One</div>
+				<ul>
+					<li><a href="#">Second</a></li>
+					<li><a href="#">Second</a></li>
+					<li><a href="#">Second</a></li>
+					<li><a href="#">Second</a></li>
+				</ul>
+			</li>
+			
+			
+		</ul>
+		<h2>这是一个简单的二级菜单demo 点击试试</h2>
+	</div>
+	</body>
+	
+</html>
