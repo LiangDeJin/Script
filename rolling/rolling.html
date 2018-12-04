@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="js/jquery.js"></script>
+		<script src="js/rolling.js"></script>
+		<title>随着滚动条滚动的div</title>
+	</head>
+	<style>
+		.rollingdiv {
+			background-color: #656565;
+			opacity: 0.9;
+			border-radius: 5px;
+			width: 42px;
+			position: absolute;
+			top: 200px;
+			right: 5px;
+			text-align: center;
+			height: 200px;
+			z-index: 999;
+		}	
+	</style>
+	<body>
+		<!--随着滚动条滚动的div-->
+		<h2>这是一个简单的滚动条demo 滑动鼠标试一下，右边的div一直都保持同一个位置</h2>
+		<div style="height: 500px;"></div>
+		<div class="rollingdiv"></div>
+		<div style="height: 5000px;"></div>
+		<h2>###############底部###################</h2>
+	</body>
+</html>
