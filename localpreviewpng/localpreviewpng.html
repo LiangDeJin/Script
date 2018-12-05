@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="js/jquery-3.1.0.min.js"></script>
+		<script src="js/localpreviewpng.js"></script>
+		<title>本地预览图片</title>
+	</head>
+	<style>
+		div{
+			width: 300px;
+			height: 300px;
+		}
+		#pic {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			margin: 20px auto;
+			cursor: pointer;
+			border: 1px solid #333333;
+			}	
+		input{
+			display: none;
+		}
+		</style>
+	<body>
+		<div>
+			<img id="pic" src="">
+			<input id="upload" name="file" accept="image/*" type="file" />
+		</div>
+
+		<h2>这是图片本地预览的功能，例如头像预览。点击圈圈试试</h2>
+		<h2>只需要把 js 导入文件 样式按照个人需要调整。</h2>
+		<h2>主要是对图片的存和取</h2>			
+		
+	</body>
+</html>

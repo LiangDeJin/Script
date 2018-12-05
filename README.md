@@ -10,3 +10,4 @@
 - [三级联动](https://htmlpreview.github.io/?https://github.com/Crystal-LDJ/Script/blob/master/threelevellinkage/threelevellinkage.html)
 - [二级菜单](https://htmlpreview.github.io/?https://github.com/Crystal-LDJ/Script/blob/master/menu/menu.html)
 - [随着滚动条滚动的div](https://htmlpreview.github.io/?https://github.com/Crystal-LDJ/Script/blob/master/rolling/rolling.html)
+- [图片上传预览](https://htmlpreview.github.io/?https://github.com/Crystal-LDJ/Script/blob/master/localpreviewpng/localpreviewpng.html)
