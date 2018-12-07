@@ -11,6 +11,7 @@
 - [二级菜单](https://htmlpreview.github.io/?https://github.com/Crystal-LDJ/Script/blob/master/menu/menu.html)
 - [随着滚动条滚动的div](https://htmlpreview.github.io/?https://github.com/Crystal-LDJ/Script/blob/master/rolling/rolling.html)
 - [图片上传预览](https://htmlpreview.github.io/?https://github.com/Crystal-LDJ/Script/blob/master/localpreviewpng/localpreviewpng.html)
+- [简单的日历制作](https://htmlpreview.github.io/?https://github.com/Crystal-LDJ/Script/blob/master/calendar/calendar.html)
 
 ### 总结 CSS 样式使用
 - [图片上传预览](https://htmlpreview.github.io/?https://github.com/Crystal-LDJ/Script/blob/master/css/transitions/transitions.html)
